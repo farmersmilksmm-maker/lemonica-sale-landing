@@ -87,6 +87,23 @@ p { margin: 0 0 1em; }
 .music-toggle:hover { transform: scale(1.06); }
 .music-toggle.playing { color: var(--lemon-soft); border-color: var(--lemon); }
 
+.region-cta { margin: 28px 0 6px; }
+.region-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border: 1.5px solid var(--lemon);
+  border-radius: 999px;
+  color: var(--lemon);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: .03em;
+  transition: background .25s var(--ease), color .25s var(--ease), transform .25s var(--ease);
+}
+.region-btn::before { content: "↓"; font-size: 16px; }
+.region-btn:hover { background: var(--lemon); color: #1a1a12; transform: translateY(-1px); }
+
 /* ---------- top strip ---------- */
 .top-strip {
   min-height: 34px;
