@@ -2,7 +2,8 @@
 (function () {
   "use strict";
 
-  var CONTACT_EMAIL = "sale@lemonica.rest"; // TODO: replace with the broker/owner inbox before publishing
+  var CONTACT_EMAIL = "farmersmilksmm@gmail.com";
+  var FORM_EMAIL = "farmersmilksmm+lemonica@gmail.com"; // FormSubmit endpoint (plus-alias → separate form, same inbox)
 
   var dict = window.I18N || { en: {}, ru: {} };
   var langs = ["en", "ru"];
@@ -43,7 +44,7 @@
   }
   applyLang(initial);
 
-  // ---- inquiry form: compose a pre-filled email, store nothing ----
+  // ---- inquiry form: send straight to the Farmer's Milk SMM mailbox ----
   var form = document.getElementById("inquiry-form");
   var status = document.getElementById("form-status");
   if (form) {
@@ -60,18 +61,36 @@
       status.textContent = valid ? (t["form.ok"] || "") : (t["form.err.required"] || "");
       if (!valid) return;
 
-      var subject = "LEMONICA acquisition inquiry — " + name;
-      var body = [
-        "Name: " + name,
-        "Email: " + email,
-        phone ? "Phone / WhatsApp: " + phone : null,
-        "",
-        message || (t["form.message.ph"] || "")
-      ].filter(function (l) { return l !== null; }).join("\n");
+      var payload = {
+        name: name,
+        email: email,
+        phone: phone || "—",
+        message: message || (t["form.message.ph"] || ""),
+        _subject: "LEMONICA acquisition inquiry — " + name,
+        _template: "table",
+        _captcha: "false",
+        _replyto: email
+      };
 
-      window.location.href = "mailto:" + CONTACT_EMAIL +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
+      var btn = form.querySelector("button[type=submit]");
+      if (btn) btn.disabled = true;
+      fetch("https://formsubmit.co/ajax/" + FORM_EMAIL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        if (!r.ok) throw new Error("http " + r.status);
+        return r.json();
+      }).then(function () {
+        status.className = "form-status ok";
+        status.textContent = t["form.ok"] || "Sent.";
+        form.reset();
+      }).catch(function () {
+        status.className = "form-status err";
+        status.textContent = (t["form.err.send"] || "Sending failed.") + " " + CONTACT_EMAIL;
+      }).finally(function () {
+        if (btn) btn.disabled = false;
+      });
     });
   }
 

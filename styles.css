@@ -286,20 +286,16 @@ p { margin: 0 0 1em; }
   display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap;
   margin-bottom: 48px;
 }
-.google-badge {
-  display: flex; flex-direction: column; gap: 4px;
+.reviews-google-link {
+  display: inline-flex; flex-direction: column; gap: 2px;
   text-decoration: none;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 18px 24px;
-  background: var(--white);
-  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  border-bottom: 2px solid var(--lemon);
+  padding-bottom: 6px;
+  font-size: 15px; font-weight: 650;
+  transition: opacity .25s var(--ease);
 }
-.google-badge:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(20,20,11,.10); }
-.google-stars { color: var(--lemon); letter-spacing: .18em; font-size: 18px; }
-.google-line { font-size: 15px; }
-.google-line strong { font-size: 22px; font-family: "Source Serif 4", serif; }
-.google-cta { font-size: 13.5px; font-weight: 700; color: var(--lemon-deep); }
+.reviews-google-link:hover { opacity: .75; }
+.reviews-google-link [data-i18n="reviews.cta"] { font-size: 13px; font-weight: 700; color: var(--lemon-deep); }
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -385,6 +381,45 @@ p { margin: 0 0 1em; }
   position: absolute; left: 2px; top: 12px;
 }
 .contact-note { color: var(--muted); font-size: 15px; }
+
+.contact-card {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px 36px;
+  display: flex; flex-direction: column; gap: 8px;
+  align-self: start;
+}
+.contact-card-kicker {
+  font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--lemon-deep);
+}
+.contact-card-name { font-family: "Source Serif 4", serif; font-size: 44px; font-weight: 620; line-height: 1; margin: 4px 0 2px; }
+.contact-card-role { color: var(--muted); font-size: 14.5px; margin: 0 0 6px; }
+.contact-card-email {
+  font-size: 17px; font-weight: 650; color: var(--ink);
+  text-decoration: none; border-bottom: 2px solid var(--lemon);
+  width: fit-content; margin-bottom: 22px;
+}
+.contact-card .button { margin-top: auto; }
+.contact-card-flat { background: var(--white); margin: 30px 0 26px; }
+
+/* ---------- contacts page ---------- */
+.site-header-solid { position: static; color: var(--ink); border-bottom: 1px solid var(--line); }
+.site-header-solid .brand, .site-header-solid .nav-links a { color: var(--ink); }
+.site-header-solid .nav-links a:hover { color: var(--lemon-deep); }
+.site-header-solid .language-switcher { border-color: var(--line); }
+.site-header-solid .language-switcher button { color: var(--muted); }
+.site-header-solid .language-switcher button[aria-pressed="true"] { background: var(--ink); color: var(--white); }
+.contacts-hero { padding-top: clamp(60px, 7vw, 100px); }
+.contacts-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 460px;
+  gap: 70px;
+  align-items: start;
+}
+.contacts-back { font-weight: 700; color: var(--lemon-deep); text-decoration: none; font-size: 15px; }
+.contacts-back:hover { text-decoration: underline; }
 
 .inquiry-form {
   background: var(--cream);

@@ -15,7 +15,7 @@
   <script src="app.js?v=20260902-1" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#contact" data-i18n="skip">Skip to inquiry form</a>
+  <a class="skip-link" href="contacts.html" data-i18n="skip">Skip to inquiry form</a>
 
   <div class="top-strip" role="note">
     <span data-i18n="strip.left">Private offering</span>
@@ -43,7 +43,7 @@
         <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="ru" lang="ru" aria-pressed="false">RU</button>
       </div>
-      <a class="button button-small button-primary" href="#contact" data-i18n="nav.cta">Request details</a>
+      <a class="button button-small button-primary" href="contacts.html" data-i18n="nav.cta">Request details</a>
     </div>
   </header>
 
@@ -64,7 +64,7 @@
             homemade pasta, a wood-fired pizza program, live-music weekends and one of the strongest review profiles in the city.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact" data-i18n="hero.cta.primary">Request the offering details</a>
+            <a class="button button-primary" href="contacts.html" data-i18n="hero.cta.primary">Request the offering details</a>
             <a class="button button-ghost" href="https://www.google.com/maps/place/LEMONICA/@26.0127406,-80.1438862,17z" target="_blank" rel="noopener" data-i18n="hero.cta.secondary">Read Google reviews</a>
           </div>
         </div>
@@ -189,10 +189,9 @@
         <p class="section-index" data-i18n="reviews.index">03 / Reviews</p>
         <div class="reviews-head">
           <h2 id="reviews-title" data-i18n="reviews.title">What guests say.</h2>
-          <a class="google-badge" href="https://www.google.com/maps/place/LEMONICA/@26.0127406,-80.1438862,17z" target="_blank" rel="noopener">
-            <span class="google-stars" aria-hidden="true">★★★★★</span>
-            <span class="google-line"><strong>4.8</strong> · <span data-i18n="reviews.badge">2,500+ reviews on Google</span></span>
-            <span class="google-cta" data-i18n="reviews.cta">Read all reviews →</span>
+          <a class="reviews-google-link" href="https://www.google.com/maps/place/LEMONICA/@26.0127406,-80.1438862,17z" target="_blank" rel="noopener">
+            <span data-i18n="reviews.line">4.8 ★ · 2,500+ reviews on Google</span>
+            <span data-i18n="reviews.cta">Read all reviews →</span>
           </a>
         </div>
         <div class="reviews-grid">
@@ -275,7 +274,9 @@
           <h2 id="contact-title" data-i18n="contact.title">Own the restaurant Hollywood already loves.</h2>
           <p class="lead" data-i18n="contact.lead">
             This is a sale of a running business — not a closure, not a concept. The dining room is full,
-            the reviews keep coming, the team is in place. Financials are available upon request under NDA.
+            the reviews keep coming, the team is in place. The owners are selling due to their relocation
+            to another country and are ready to hand the business over within a short timeframe.
+            Financials are available upon request under NDA.
           </p>
           <ul class="included-list">
             <li data-i18n="inc.1">The LEMONICA brand, name and social accounts (28K+ Instagram)</li>
@@ -288,28 +289,13 @@
           <p class="contact-note" data-i18n="contact.note">Serious inquiries only. Introduce yourself and we will send the offering package.</p>
         </div>
 
-        <form class="inquiry-form" id="inquiry-form" novalidate>
-          <h3 data-i18n="form.title">Request the offering details</h3>
-          <div class="field">
-            <label for="f-name" data-i18n="form.name">Full name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required>
-          </div>
-          <div class="field">
-            <label for="f-email" data-i18n="form.email">Email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="f-phone" data-i18n="form.phone">Phone / WhatsApp</label>
-            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-          <div class="field">
-            <label for="f-message" data-i18n="form.message">Message</label>
-            <textarea id="f-message" name="message" rows="4" data-i18n-ph="form.message.ph">I am interested in acquiring LEMONICA. Please send the offering package."></textarea>
-          </div>
-          <button class="button button-primary button-block" type="submit" data-i18n="form.submit">Send inquiry</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-fineprint" data-i18n="form.fine">Submitting opens your email app with the inquiry pre-filled — nothing is stored on this page.</p>
-        </form>
+        <div class="contact-card">
+          <span class="contact-card-kicker" data-i18n="contact.kicker">Contact</span>
+          <strong class="contact-card-name" data-i18n="contact.person">Mark</strong>
+          <p class="contact-card-role" data-i18n="contact.role">Sale contact · replies within 24 hours</p>
+          <a class="contact-card-email" href="mailto:farmersmilksmm@gmail.com">farmersmilksmm@gmail.com</a>
+          <a class="button button-primary button-block" href="contacts.html" data-i18n="contact.cta">Go to contacts</a>
+        </div>
       </div>
     </section>
   </main>
