@@ -131,7 +131,7 @@ window.I18N = {
     "form.ok": "Inquiry sent. Mark will reply within 24 hours.",
     "footer.tag": "Operating Italian restaurant · For sale · Hollywood, FL",
     "footer.maps": "Google Maps",
-    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Music: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> via Jamendo, excerpt). Financial performance statements available to qualified buyers under NDA.",
+    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Music: «Lemonica» — original brand song composed for the restaurant. Financial performance statements available to qualified buyers under NDA.",
     "music.label": "Music on/off",
     "region.btn": "District statistics — CoStar report (PDF) · 10-mile radius"
   },
@@ -267,7 +267,7 @@ window.I18N = {
     "form.ok": "Заявка отправлена. Марк ответит в течение 24 часов.",
     "footer.tag": "Действующий итальянский ресторан · Продаётся · Голливуд, Флорида",
     "footer.maps": "Google Maps",
-    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Музыка: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> через Jamendo, фрагмент). Финансовые показатели доступны квалифицированным покупателям под NDA.",
+    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Музыка: «Lemonica» — оригинальная фирменная песня, написанная для ресторана. Финансовые показатели доступны квалифицированным покупателям под NDA.",
     "music.label": "Музыка вкл/выкл",
     "region.btn": "Статистика района — отчёт CoStar (PDF) · радиус 10 миль"
   },
@@ -403,7 +403,7 @@ window.I18N = {
     "form.ok": "Consulta enviada. Mark responderá en 24 horas.",
     "footer.tag": "Restaurante italiano en operación · En venta · Hollywood, FL",
     "footer.maps": "Google Maps",
-    "footer.fine": "Página de oferta privada. Fotos y video cortesía de LEMONICA. Música: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> vía Jamendo, fragmento). Los estados financieros están disponibles para compradores calificados bajo NDA.",
+    "footer.fine": "Página de oferta privada. Fotos y video cortesía de LEMONICA. Música: «Lemonica» — canción original de marca compuesta para el restaurante. Los estados financieros están disponibles para compradores calificados bajo NDA.",
     "music.label": "Música sí/no",
     "region.btn": "Estadísticas de la zona — informe CoStar (PDF) · radio de 10 millas"
   },
@@ -539,7 +539,7 @@ window.I18N = {
     "form.ok": "Запит надіслано. Марк відповість протягом 24 годин.",
     "footer.tag": "Діючий італійський ресторан · Продається · Голлівуд, Фл",
     "footer.maps": "Google Maps",
-    "footer.fine": "Приватна пропозиція. Фото та відео надано LEMONICA. Музика: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> через Jamendo, фрагмент). Фінансові показники доступні кваліфікованим покупцям під NDA.",
+    "footer.fine": "Приватна пропозиція. Фото та відео надано LEMONICA. Музика: «Lemonica» — оригінальна фірмова пісня, написана для ресторану. Фінансові показники доступні кваліфікованим покупцям під NDA.",
     "music.label": "Музика вкл/вимк",
     "region.btn": "Статистика району — звіт CoStar (PDF) · радіус 10 миль"
   },
@@ -675,7 +675,7 @@ window.I18N = {
     "form.ok": "Το αίτημα εστάλη. Ο Mark θα απαντήσει εντός 24 ωρών.",
     "footer.tag": "Λειτουργικό ιταλικό εστιατόριο · Πωλείται · Χόλιγουντ, Φλ",
     "footer.maps": "Google Maps",
-    "footer.fine": "Ιδιωτική σελίδα προσφοράς. Φωτογραφίες και βίντεο ευγενική παραχώρηση του LEMONICA. Μουσική: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> μέσω Jamendo, απόσπασμα). Οι οικονομικές καταστάσεις διατίθενται σε εξειδικευμένους αγοραστές υπό NDA.",
+    "footer.fine": "Ιδιωτική σελίδα προσφοράς. Φωτογραφίες και βίντεο ευγενική παραχώρηση του LEMONICA. Μουσική: «Lemonica» — πρωτότυπο τραγούδι του brand που γράφτηκε για το εστιατόριο. Οι οικονομικές καταστάσεις διατίθενται σε εξειδικευμένους αγοραστές υπό NDA.",
     "music.label": "Μουσική ναι/όχι",
     "region.btn": "Στατιστικά περιοχής — έκθεση CoStar (PDF) · ακτίνα 10 μιλίων"
   }
