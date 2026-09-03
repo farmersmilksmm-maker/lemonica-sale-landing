@@ -5,8 +5,8 @@
   var CONTACT_EMAIL = "farmersmilksmm@gmail.com";
   var FORM_EMAIL = "farmersmilksmm+lemonica@gmail.com"; // FormSubmit endpoint (plus-alias → separate form, same inbox)
 
-  var dict = window.I18N || { en: {}, ru: {} };
-  var langs = ["en", "ru"];
+  var dict = window.I18N || { en: {}, ru: {}, es: {} };
+  var langs = ["en", "ru", "es"];
   var stored = null;
   try { stored = localStorage.getItem("lemonica-lang"); } catch (e) {}
 
@@ -44,7 +44,7 @@
   var initial = stored;
   if (!initial) {
     var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
-    initial = nav === "ru" ? "ru" : "en";
+    initial = (nav === "ru" || nav === "es") ? nav : "en";
   }
   applyLang(initial);
 
