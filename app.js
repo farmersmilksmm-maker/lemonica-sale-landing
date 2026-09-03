@@ -127,37 +127,33 @@
   }
 
   // ---- background music: browsers block sound autoplay, so we start on the
-  // first user gesture; a toggle remembers the visitor's choice ----
+  // first user gesture; EVERY gesture retries (a rejected first attempt must
+  // not lock music off), and the toggle always works ----
   var music = document.getElementById("bg-music");
   var musicBtn = document.getElementById("music-toggle");
   if (music && musicBtn) {
     music.volume = 0.35;
     var musicUserOff = false;
     try { musicUserOff = localStorage.getItem("lemonica-music") === "off"; } catch (e) {}
-    var musicStarted = false;
 
     var setBtn = function (playing) {
       musicBtn.setAttribute("aria-pressed", String(playing));
       musicBtn.classList.toggle("playing", playing);
     };
     var startMusic = function () {
-      if (musicUserOff || musicStarted) return;
-      musicStarted = true;
+      if (musicUserOff || !music.paused) return;
       var mp = music.play();
       if (mp && mp.then) {
         mp.then(function () { setBtn(true); }).catch(function () { setBtn(false); });
+      } else {
+        setBtn(true);
       }
     };
-    var stopMusic = function () {
-      music.pause();
-      musicStarted = false;
-      setBtn(false);
-    };
 
-    // autoplay attempt (usually blocked until first gesture — harmless)
+    // autoplay attempt (usually rejected until the first gesture — harmless)
     startMusic();
-    // start on first tap/click/scroll gesture anywhere on the page
-    ["pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    // retry on every gesture — pointer, touch AND click
+    ["pointerdown", "touchend", "click", "keydown"].forEach(function (evt) {
       document.addEventListener(evt, startMusic, { passive: true });
     });
 
@@ -165,12 +161,12 @@
       if (music.paused) {
         musicUserOff = false;
         try { localStorage.setItem("lemonica-music", "on"); } catch (e) {}
-        musicStarted = false;
         startMusic();
       } else {
         musicUserOff = true;
         try { localStorage.setItem("lemonica-music", "off"); } catch (e) {}
-        stopMusic();
+        music.pause();
+        setBtn(false);
       }
     });
   }
