@@ -427,6 +427,11 @@ p { margin: 0 0 1em; }
   border-radius: 22px;
   padding: 38px 34px;
 }
+.contact-inline {
+  font-size: 14px; color: var(--muted); margin: 0 0 18px;
+}
+.contact-inline strong { color: var(--ink); }
+.contact-inline a { color: var(--ink); font-weight: 650; border-bottom: 2px solid var(--lemon); text-decoration: none; }
 .inquiry-form h3 { margin-bottom: 24px; }
 .field { margin-bottom: 18px; }
 .field label {

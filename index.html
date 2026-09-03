@@ -15,7 +15,7 @@
   <script src="app.js?v=20260902-1" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="contacts.html" data-i18n="skip">Skip to inquiry form</a>
+  <a class="skip-link" href="#contact" data-i18n="skip">Skip to inquiry form</a>
 
   <div class="top-strip" role="note">
     <span data-i18n="strip.left">Private offering</span>
@@ -28,7 +28,6 @@
   <header class="site-header" aria-label="Primary navigation">
     <a class="brand" href="#top" aria-label="LEMONICA — back to top">
       <span class="brand-name">LEMONICA</span>
-      <img class="brand-mark" src="assets/logo/lemon.svg" alt="" width="26" height="26" aria-hidden="true">
       <span class="brand-tag" data-i18n="brand.tag">for sale</span>
     </a>
     <nav class="nav-links" aria-label="Page sections">
@@ -43,7 +42,7 @@
         <button type="button" data-lang="en" lang="en" aria-pressed="true">EN</button>
         <button type="button" data-lang="ru" lang="ru" aria-pressed="false">RU</button>
       </div>
-      <a class="button button-small button-primary" href="contacts.html" data-i18n="nav.cta">Request details</a>
+      <a class="button button-small button-primary" href="#contact" data-i18n="nav.cta">Request details</a>
     </div>
   </header>
 
@@ -64,7 +63,7 @@
             homemade pasta, a wood-fired pizza program, live-music weekends and one of the strongest review profiles in the city.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="contacts.html" data-i18n="hero.cta.primary">Request the offering details</a>
+            <a class="button button-primary" href="#contact" data-i18n="hero.cta.primary">Request the offering details</a>
             <a class="button button-ghost" href="https://www.google.com/maps/place/LEMONICA/@26.0127406,-80.1438862,17z" target="_blank" rel="noopener" data-i18n="hero.cta.secondary">Read Google reviews</a>
           </div>
         </div>
@@ -79,7 +78,7 @@
             <span data-i18n="panel.reviews">Google reviews</span>
           </div>
           <div class="hero-panel-item">
-            <strong>28K+</strong>
+            <strong>30K+</strong>
             <span data-i18n="panel.followers">Instagram followers</span>
           </div>
           <div class="hero-panel-item">
@@ -91,7 +90,7 @@
 
       <div class="hero-footer shell" aria-hidden="true">
         <span data-i18n="hero.footer1">Homemade pasta</span>
-        <span data-i18n="hero.footer2">Wood-fired pizza</span>
+        <span data-i18n="hero.footer2">Open-fire pizza</span>
         <span data-i18n="hero.footer3">Live music Fri–Sat</span>
         <span data-i18n="hero.footer4">Terrace on ArtsPark</span>
       </div>
@@ -109,7 +108,7 @@
             translated into a warm, family-owned Italian restaurant.
           </p>
           <p data-i18n="story.lead2">
-            Everything is built around craft — pasta made daily by hand, pizza from a blazing wood-fired oven,
+            Everything is built around craft — pasta made daily by hand, pizza baked over open fire,
             signature desserts and a carefully edited wine list. Fridays and Saturdays come alive with live music,
             and the terrace has become one of the most photographed corners of the city.
           </p>
@@ -244,10 +243,10 @@
             <p data-i18n="press.c1">28K+ followers, reels from local bloggers, collab posts and a constant flow of guest content.</p>
             <span class="press-link" data-i18n="press.open">Open →</span>
           </a>
-          <a class="press-card" href="https://www.yelp.com/biz/lemonica-hollywood" target="_blank" rel="noopener">
-            <span class="press-source">Yelp</span>
-            <strong data-i18n="press.c2t">LEMONICA on Yelp</strong>
-            <p data-i18n="press.c2">281 guest photos and a living thread of visitor reviews.</p>
+          <a class="press-card" href="https://www.google.com/maps/place/LEMONICA/@26.0127406,-80.1438862,17z" target="_blank" rel="noopener">
+            <span class="press-source">Google</span>
+            <strong data-i18n="press.c2t">4.8 ★ on Google Maps</strong>
+            <p data-i18n="press.c2">2,500+ guest reviews — the rating a new owner inherits.</p>
             <span class="press-link" data-i18n="press.open">Open →</span>
           </a>
           <a class="press-card" href="https://www.opentable.com/r/lemonica-hollywood" target="_blank" rel="noopener">
@@ -279,9 +278,9 @@
             Financials are available upon request under NDA.
           </p>
           <ul class="included-list">
-            <li data-i18n="inc.1">The LEMONICA brand, name and social accounts (28K+ Instagram)</li>
+            <li data-i18n="inc.1">The LEMONICA brand, name and social accounts (30K+ Instagram)</li>
             <li data-i18n="inc.2">Prime lease on Young Circle at the ArtsPark</li>
-            <li data-i18n="inc.3">Fully equipped kitchen incl. wood-fired oven</li>
+            <li data-i18n="inc.3">Fully equipped kitchen · open-fire pizza</li>
             <li data-i18n="inc.4">Trained team, recipes and operating SOPs</li>
             <li data-i18n="inc.5">Delivery &amp; reservation infrastructure (DoorDash, Uber Eats, OpenTable)</li>
             <li data-i18n="inc.6">Franchise program foundations</li>
@@ -289,13 +288,34 @@
           <p class="contact-note" data-i18n="contact.note">Serious inquiries only. Introduce yourself and we will send the offering package.</p>
         </div>
 
-        <div class="contact-card">
-          <span class="contact-card-kicker" data-i18n="contact.kicker">Contact</span>
-          <strong class="contact-card-name" data-i18n="contact.person">Mark</strong>
-          <p class="contact-card-role" data-i18n="contact.role">Sale contact · replies within 24 hours</p>
-          <a class="contact-card-email" href="mailto:farmersmilksmm@gmail.com">farmersmilksmm@gmail.com</a>
-          <a class="button button-primary button-block" href="contacts.html" data-i18n="contact.cta">Go to contacts</a>
-        </div>
+        <form class="inquiry-form" id="inquiry-form" novalidate>
+          <p class="contact-inline">
+            <span data-i18n="contact.kicker">Contact</span>:
+            <strong data-i18n="contact.person">Mark</strong> ·
+            <a href="mailto:farmersmilksmm@gmail.com">farmersmilksmm@gmail.com</a>
+          </p>
+          <h3 data-i18n="form.title">Request the offering details</h3>
+          <div class="field">
+            <label for="f-name" data-i18n="form.name">Full name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-email" data-i18n="form.email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-phone" data-i18n="form.phone">Phone / WhatsApp</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="f-message" data-i18n="form.message">Message</label>
+            <textarea id="f-message" name="message" rows="4" data-i18n-ph="form.message.ph">I am interested in acquiring LEMONICA. Please send the offering package."></textarea>
+          </div>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <button class="button button-primary button-block" type="submit" data-i18n="form.submit">Send inquiry</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          <p class="form-fineprint" data-i18n="form.fine">The inquiry goes straight to our mailbox — nothing is stored on this page.</p>
+        </form>
       </div>
     </section>
   </main>
