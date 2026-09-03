@@ -602,6 +602,8 @@ p { margin: 0 0 1em; }
   .site-header { top: 34px; grid-template-columns: 1fr auto; min-height: 70px; }
   .brand-tag { display: none; }
   .header-actions .button { display: none; }
+  .language-switcher button { padding: 6px 8px; font-size: 11px; letter-spacing: .03em; }
+  .header-actions { gap: 10px; }
   .hero-content { padding-top: 150px; margin-bottom: 34px; }
   .hero-panel-item { padding: 16px 14px; }
   .hero-panel-item strong { font-size: 26px; }
