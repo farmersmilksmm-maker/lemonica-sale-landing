@@ -71,17 +71,18 @@ def footer(s, page):
     tx(s, 12.45, 7.04, 0.4, 0.35, [[(str(page), 10, MUTED, True, False, SANS)]], align=PP_ALIGN.RIGHT)
 
 
-LOGO = "/Users/denysharbuzov/Documents/Limonika_Sale_Landing_2026-09-02/presentation/logo_lemonica_circle.png"
+LOGO = "/Users/denysharbuzov/Documents/Limonika_Sale_Landing_2026-09-02/presentation/lemonica_logo.png"
 
 
-def lemon_mark(s, x, y, size=0.62):
-    """Настоящий логотип LEMONICA (круглая вырезка с прозрачностью)."""
+def lemon_mark(s, x, y, size=0.9):
+    """Настоящий логотип LEMONICA (прозрачный PNG из заготовок, без вырезок)."""
     s.shapes.add_picture(LOGO, Inches(x), Inches(y), Inches(size), Inches(size))
 
 
-def header(s, kicker, title_runs, sub=None):
+def header(s, kicker, title_runs, sub=None, title_size=38):
     tx(s, 0.6, 0.45, 9.0, 0.3, [[(kicker, 12, GREEN, True, False, SANS)]])
-    tx(s, 0.6, 0.82, 12.1, 1.1, [title_runs], line_spacing=1.02)
+    tx(s, 0.6, 0.82, 12.1, 1.1, [[(t, title_size, c, b, i, f) for (t, c, b, i, f) in
+                               [(r[0], r[2], r[3], r[4], r[5]) for r in title_runs]]], line_spacing=1.02)
     if sub:
         tx(s, 0.6, 1.95, 12.1, 0.45, [[(sub, 14, MUTED, False, False, SANS)]])
 
@@ -104,16 +105,17 @@ def stat_card(s, x, y, w, h, big, label, sub=None, accent=LEMON_DEEP):
     ps = box.text_frame.paragraphs
     ps[0].space_after = Pt(8)
     if sub:
+        ps[2].space_before = Pt(4)
         ps[1].space_after = Pt(4)
 
 
 # ============ SLIDE 1 — рост и люди (10 миль) ============
 s = slide()
-lemon_mark(s, 12.15, 0.38)
+lemon_mark(s, 11.85, 0.28)
 header(s, "ГОЛЛИВУД · ФЛОРИДА · 01",
        [("Район растёт: ", 38, INK, True, False, SERIF),
         ("+90 000 жителей за 5 лет", 38, LEMON_DEEP, True, False, SERIF)],
-       "Радиус 10 миль от ресторана — прогноз CoStar, 2025 → 2030")
+       "Радиус 10 миль от ресторана — прогноз CoStar, 2025–2030")
 
 # chart: two bars
 cx, cy, ch = 0.9, 2.9, 3.05
@@ -149,11 +151,11 @@ footer(s, 1)
 
 # ============ SLIDE 2 — стройка и спрос ============
 s = slide()
-lemon_mark(s, 12.15, 0.38)
+lemon_mark(s, 11.85, 0.28)
 header(s, "ГОЛЛИВУД · ФЛОРИДА · 02",
        [("Город застраивается: ", 38, INK, True, False, SERIF),
         ("спрос опережает предложение", 38, LEMON_DEEP, True, False, SERIF)],
-       "Субмаркет Hollywood / Dania Beach и рынок Fort Lauderdale — CoStar, Q3 2026")
+       "Субмаркет Hollywood / Dania Beach и рынок Fort Lauderdale — CoStar, Q3 2026", title_size=34)
 
 stat_card(s, 0.7, 2.75, 3.9, 1.85, "868", "квартир построено за 12 месяцев", "в субмаркете Hollywood / Dania Beach")
 stat_card(s, 4.72, 2.75, 3.9, 1.85, "624", "квартир строится прямо сейчас", "+2,9% к жилому фонду района")
