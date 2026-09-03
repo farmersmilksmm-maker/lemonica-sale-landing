@@ -5,6 +5,9 @@
 видео, секции с индексами, editorial-типографика (Source Serif 4 + Source Sans 3),
 двуязычие.
 
+**Live:** https://farmersmilksmm-maker.github.io/lemonica-sale-landing/
+(репозиторий: `farmersmilksmm-maker/lemonica-sale-landing`, GitHub Pages, ветка main)
+
 ## Запуск
 
 Открыть `index.html` в браузере или поднять статический сервер:

@@ -98,14 +98,15 @@ p { margin: 0 0 1em; }
   color: var(--white);
 }
 .brand {
-  display: inline-flex; align-items: baseline; gap: 10px;
+  display: inline-flex; align-items: center; gap: 10px;
+  line-height: 1; white-space: nowrap;
   text-decoration: none; color: var(--white); width: fit-content;
 }
 .brand-name {
   font-family: "Source Serif 4", serif;
   font-size: 26px; font-weight: 650; letter-spacing: .06em;
 }
-.brand-mark { font-size: 20px; }
+.brand-mark { width: 26px; height: 26px; display: block; flex: 0 0 auto; }
 .brand-tag {
   font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
   color: var(--lemon-soft);
@@ -378,9 +379,10 @@ p { margin: 0 0 1em; }
   font-weight: 600;
 }
 .included-list li::before {
-  content: "🍋";
+  content: "";
+  width: 14px; height: 14px;
+  background: url("assets/logo/lemon.svg") center/contain no-repeat;
   position: absolute; left: 2px; top: 12px;
-  font-size: 14px;
 }
 .contact-note { color: var(--muted); font-size: 15px; }
 
