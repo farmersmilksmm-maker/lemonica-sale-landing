@@ -27,6 +27,10 @@
       var key = el.getAttribute("data-i18n-ph");
       if (t[key] != null) el.setAttribute("placeholder", t[key]);
     });
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var key = el.getAttribute("data-i18n-aria");
+      if (t[key] != null) el.setAttribute("aria-label", t[key]);
+    });
     document.querySelectorAll(".language-switcher button").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
     });
@@ -120,5 +124,54 @@
   if (heroVideo) {
     var p = heroVideo.play();
     if (p && p.catch) p.catch(function () { /* poster stays visible */ });
+  }
+
+  // ---- background music: browsers block sound autoplay, so we start on the
+  // first user gesture; a toggle remembers the visitor's choice ----
+  var music = document.getElementById("bg-music");
+  var musicBtn = document.getElementById("music-toggle");
+  if (music && musicBtn) {
+    music.volume = 0.35;
+    var musicUserOff = false;
+    try { musicUserOff = localStorage.getItem("lemonica-music") === "off"; } catch (e) {}
+    var musicStarted = false;
+
+    var setBtn = function (playing) {
+      musicBtn.setAttribute("aria-pressed", String(playing));
+      musicBtn.classList.toggle("playing", playing);
+    };
+    var startMusic = function () {
+      if (musicUserOff || musicStarted) return;
+      musicStarted = true;
+      var mp = music.play();
+      if (mp && mp.then) {
+        mp.then(function () { setBtn(true); }).catch(function () { setBtn(false); });
+      }
+    };
+    var stopMusic = function () {
+      music.pause();
+      musicStarted = false;
+      setBtn(false);
+    };
+
+    // autoplay attempt (usually blocked until first gesture — harmless)
+    startMusic();
+    // start on first tap/click/scroll gesture anywhere on the page
+    ["pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+      document.addEventListener(evt, startMusic, { passive: true });
+    });
+
+    musicBtn.addEventListener("click", function () {
+      if (music.paused) {
+        musicUserOff = false;
+        try { localStorage.setItem("lemonica-music", "on"); } catch (e) {}
+        musicStarted = false;
+        startMusic();
+      } else {
+        musicUserOff = true;
+        try { localStorage.setItem("lemonica-music", "off"); } catch (e) {}
+        stopMusic();
+      }
+    });
   }
 })();

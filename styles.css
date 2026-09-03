@@ -68,6 +68,25 @@ p { margin: 0 0 1em; }
 }
 .skip-link:focus { top: 16px; }
 
+.music-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--line-light);
+  background: rgba(14, 14, 8, .55);
+  color: rgba(255, 253, 246, .8);
+  font-size: 20px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: color .25s var(--ease), border-color .25s var(--ease), transform .25s var(--ease);
+}
+.music-toggle:hover { transform: scale(1.06); }
+.music-toggle.playing { color: var(--lemon-soft); border-color: var(--lemon); }
+
 /* ---------- top strip ---------- */
 .top-strip {
   min-height: 34px;

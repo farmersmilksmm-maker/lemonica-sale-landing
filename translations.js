@@ -107,7 +107,8 @@ window.I18N = {
     "form.ok": "Inquiry sent. Mark will reply within 24 hours.",
     "footer.tag": "Operating Italian restaurant · For sale · Hollywood, FL",
     "footer.maps": "Google Maps",
-    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Financial performance statements available to qualified buyers under NDA."
+    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Music: G. Rossini «La Danza» — U.S. Air Force Band Strolling Strings (public domain). Financial performance statements available to qualified buyers under NDA.",
+    "music.label": "Music on/off"
   },
 
   ru: {
@@ -217,6 +218,7 @@ window.I18N = {
     "form.ok": "Заявка отправлена. Марк ответит в течение 24 часов.",
     "footer.tag": "Действующий итальянский ресторан · Продаётся · Голливуд, Флорида",
     "footer.maps": "Google Maps",
-    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Финансовые показатели доступны квалифицированным покупателям под NDA."
+    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Музыка: Дж. Россини «Ла Данца» — струнные оркестра ВВС США (общественное достояние). Финансовые показатели доступны квалифицированным покупателям под NDA.",
+    "music.label": "Музыка вкл/выкл"
   }
 };
