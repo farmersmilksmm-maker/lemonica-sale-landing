@@ -65,7 +65,7 @@
         name: name,
         email: email,
         phone: phone || "—",
-        message: message || (t["form.message.ph"] || ""),
+        message: message || "",
         _subject: "LEMONICA acquisition inquiry — " + name,
         _template: "table",
         _captcha: "false",
@@ -74,23 +74,44 @@
 
       var btn = form.querySelector("button[type=submit]");
       if (btn) btn.disabled = true;
-      fetch("https://formsubmit.co/ajax/" + FORM_EMAIL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "Accept": "application/json" },
-        body: JSON.stringify(payload)
-      }).then(function (r) {
-        if (!r.ok) throw new Error("http " + r.status);
-        return r.json();
-      }).then(function () {
-        status.className = "form-status ok";
-        status.textContent = t["form.ok"] || "Sent.";
-        form.reset();
-      }).catch(function () {
-        status.className = "form-status err";
-        status.textContent = (t["form.err.send"] || "Sending failed.") + " " + CONTACT_EMAIL;
-      }).finally(function () {
-        if (btn) btn.disabled = false;
-      });
+      var sendOnce = function () {
+        return fetch("https://formsubmit.co/ajax/" + FORM_EMAIL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(payload)
+        }).then(function (r) {
+          if (!r.ok) throw new Error("http " + r.status);
+          return r.json();
+        }).then(function (j) {
+          if (String(j && j.success) !== "true") throw new Error("rejected");
+        });
+      };
+      sendOnce()
+        .catch(sendOnce)
+        .then(function () {
+          status.className = "form-status ok";
+          status.textContent = t["form.ok"] || "Sent.";
+          form.reset();
+        })
+        .catch(function () {
+          status.className = "form-status err";
+          var subject = "LEMONICA acquisition inquiry — " + name;
+          var body = ["Name: " + name, "Email: " + email,
+                      phone ? "Phone / WhatsApp: " + phone : "", "", message || ""]
+                      .filter(function (l) { return l !== ""; }).join("\n");
+          status.textContent = "";
+          status.appendChild(document.createTextNode((t["form.err.send"] || "Sending failed.") + " "));
+          var a = document.createElement("a");
+          a.href = "mailto:" + CONTACT_EMAIL +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+          a.textContent = CONTACT_EMAIL;
+          a.setAttribute("style", "font-weight:700;text-decoration:underline;");
+          status.appendChild(a);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
     });
   }
 
