@@ -131,7 +131,7 @@ window.I18N = {
     "form.ok": "Inquiry sent. Mark will reply within 24 hours.",
     "footer.tag": "Operating Italian restaurant · For sale · Hollywood, FL",
     "footer.maps": "Google Maps",
-    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Music: G. Rossini «La Danza» — U.S. Air Force Band Strolling Strings (public domain). Financial performance statements available to qualified buyers under NDA.",
+    "footer.fine": "Private offering page. Photos and video courtesy of LEMONICA. Music: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> via Jamendo, excerpt). Financial performance statements available to qualified buyers under NDA.",
     "music.label": "Music on/off",
     "region.btn": "District statistics — CoStar report (PDF) · 10-mile radius"
   },
@@ -267,7 +267,7 @@ window.I18N = {
     "form.ok": "Заявка отправлена. Марк ответит в течение 24 часов.",
     "footer.tag": "Действующий итальянский ресторан · Продаётся · Голливуд, Флорида",
     "footer.maps": "Google Maps",
-    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Музыка: Дж. Россини «Ла Данца» — струнные оркестра ВВС США (общественное достояние). Финансовые показатели доступны квалифицированным покупателям под NDA.",
+    "footer.fine": "Частная оферта. Фото и видео предоставлены LEMONICA. Музыка: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> через Jamendo, фрагмент). Финансовые показатели доступны квалифицированным покупателям под NDA.",
     "music.label": "Музыка вкл/выкл",
     "region.btn": "Статистика района — отчёт CoStar (PDF) · радиус 10 миль"
   },
@@ -403,7 +403,7 @@ window.I18N = {
     "form.ok": "Consulta enviada. Mark responderá en 24 horas.",
     "footer.tag": "Restaurante italiano en operación · En venta · Hollywood, FL",
     "footer.maps": "Google Maps",
-    "footer.fine": "Página de oferta privada. Fotos y video cortesía de LEMONICA. Música: G. Rossini «La Danza» — Strolling Strings de la Banda de la Fuerza Aérea de EE. UU. (dominio público). Los estados financieros están disponibles para compradores calificados bajo NDA.",
+    "footer.fine": "Página de oferta privada. Fotos y video cortesía de LEMONICA. Música: <a href=\"https://www.jamendo.com/track/731821\" target=\"_blank\" rel=\"noopener\">Antonio Persia — «Estate italiana»</a> (<a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener\">CC BY-SA 3.0</a> vía Jamendo, fragmento). Los estados financieros están disponibles para compradores calificados bajo NDA.",
     "music.label": "Música sí/no",
     "region.btn": "Estadísticas de la zona — informe CoStar (PDF) · radio de 10 millas"
   }
